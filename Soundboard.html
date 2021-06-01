@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Soundboardstyle.css">
+    <script src="soundboardjs.js"></script>
+    <title>Uke 4 teamoppgave team 6</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        //model
+       
+        //view
+        updateView()
+        function updateView(){
+        document.getElementById('app').innerHTML = `
+        <h1>Soundboard</h1>
+        
+        <div class="grid-container">
+        <div id="div1" class="grid-item" onclick="playSound('./Extras_soundboard_-_parametre_sounds_confetti.mp3')">Confetti</div>
+        <div id="div2" class="grid-item" onclick="playSound('./Extras_soundboard_-_parametre_sounds_clay.mp3')">Clay</div> 
+        <div id="div3" class="grid-item" onclick="playSound('./Extras_soundboard_-_parametre_sounds_bubbles.mp3')">Bubbles</div>
+        <div id="div4" class="grid-item" onclick="playSound('./Extras_soundboard_-_parametre_sounds_ufo.mp3')">Ufo</div>
+        <div id="div5" class="grid-item" onclick="playSound('./Extras_soundboard_-_parametre_sounds_moon.mp3');">Moon</div>
+        <div id="div6" class="grid-item" onclick="playSound('./Extras_soundboard_-_parametre_sounds_glimmer.mp3');">Glimmer</div>
+        </div>
+        <!-- <input id="volume" type="range" min="0" max="1" step="0.1" />-->
+        `;
+        } 
+        
+        //controller
+        function playSound (soundSrc){
+            // getElementById('div1').innerHTML = `<audio class="grid-Item" src="${soundSrc}></audio>"`
+            // let volume = getElementById('volume').value;
+            var audio = new Audio(soundSrc);
+            audio.play();
+            audio.volume = 0.2;
+            // document.getElementById('sound').play();
+        }
+    </script>
+</body>
+</html>
+
+<!-- <audio class="sound" src="enLydFilHer.mp3"></audio> -->
+
+<!-- TeamOppgave: SoundBoard !
+Lag en nettside/app der det er mulig å trykke på knapper eller andre ting som gir fra seg lyd :star_struck: 
+Bruk MVC , slik at dere blir tryggere på det :terjepenn: 
+
+Gå sammen i teamene deres - planlegg og jobb sammen for å finne en løsning - pass på at alle får bidratt! :slight_smile:
+Blir dere tidlig ferdig, så bruk resten av TP øktene  til å slippe kreativiteten løs og "jazze opp" oppgaven 
+Gleder meg til å se resultatene neste mandag! -->
+
+
+<!-- <audio id="sound1" src="yoursound.mp3" preload="auto"></audio>
+  <button onclick="document.getElementById('sound1').play();">Play
+  it</button> -->
