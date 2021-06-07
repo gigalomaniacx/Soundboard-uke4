@@ -12,7 +12,7 @@
     <div id="app"></div>
     <script>
         //model
-       
+        let volume;
         //view
         updateView()
         function updateView(){
@@ -27,17 +27,19 @@
         <div id="div5" class="grid-item" onclick="playSound('./Extras_soundboard_-_parametre_sounds_moon.mp3');">Moon</div>
         <div id="div6" class="grid-item" onclick="playSound('./Extras_soundboard_-_parametre_sounds_glimmer.mp3');">Glimmer</div>
         </div>
-        <!-- <input id="volume" type="range" min="0" max="1" step="0.1" />-->
+    
+        <div class="input">
+        <input id="volume" type="range" min="0" max="1" step="0.01">
+        </div>
         `;
         } 
-        
+        volume = document.getElementById('volume');
         //controller
         function playSound (soundSrc){
             // getElementById('div1').innerHTML = `<audio class="grid-Item" src="${soundSrc}></audio>"`
-            // let volume = getElementById('volume').value;
             var audio = new Audio(soundSrc);
             audio.play();
-            audio.volume = 0.2;
+            audio.volume = volume.value;
             // document.getElementById('sound').play();
         }
     </script>

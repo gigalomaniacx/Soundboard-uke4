@@ -2,7 +2,9 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-
+.input{
+  padding-top: 300px;
+}
 .grid-container {
  
     display: grid;
